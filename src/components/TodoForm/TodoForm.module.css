@@ -1,0 +1,40 @@
+.formContainer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 50px;
+	background-color: rgb(255, 255, 255);
+	padding: 0 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 10px;
+}
+
+.input {
+	border: 1px solid gray;
+	padding: 3px 9px;
+	font-family: 'Teachers';
+	font-size: 16px;
+}
+
+.button {
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+
+.button:disabled {
+	opacity: 0.2;
+	cursor: default;
+}
+
+.icon {
+	rotate: 0;
+	transition: all 0.2s ease-in-out;
+}
+
+.icon:hover {
+	rotate: 90deg;
+}

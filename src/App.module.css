@@ -1,0 +1,15 @@
+.appContainer {
+	width: 400px;
+	height: 600px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: white;
+	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+	padding: 15px 25px;
+	position: relative;
+}
+
+.title {
+	font-size: 26px;
+}

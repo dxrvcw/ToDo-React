@@ -1,0 +1,51 @@
+.itemContainer {
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 50px;
+}
+
+.itemContainer::before {
+	content: '';
+	width: 0;
+	height: 1px;
+	background-color: #000000;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transition: width 0.2s ease-in-out;
+	pointer-events: none;
+}
+
+.itemContainer.completed {
+	opacity: 0.7;
+	&::before {
+		width: 100%;
+	}
+}
+
+.title {
+	font-size: 20px;
+}
+.date {
+	font-size: 14px;
+}
+
+.button {
+	border: none;
+	background: none;
+	cursor: pointer;
+	margin-left: 10px;
+
+	img {
+		transition: scale 0.2s ease-in-out;
+	}
+}
+
+.button:hover {
+	img {
+		scale: 1.3;
+	}
+}
