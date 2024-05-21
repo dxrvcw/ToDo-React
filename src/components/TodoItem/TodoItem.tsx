@@ -4,7 +4,7 @@ import DeleteIcon from '../../assets/delete.svg'
 import DoneIcon from '../../assets/done.svg'
 import ITodo from '../../interfaces/ITodo'
 import { removeTodo, toggleTodo } from '../../store/todoSlice'
-import styles from './TodoItem.module.css'
+import styles from './TodoItem.module.scss'
 
 export function TodoItem({ id, title, date, completed }: ITodo): JSX.Element {
 	const dispatch = useDispatch()

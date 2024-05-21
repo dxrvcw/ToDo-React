@@ -5,27 +5,26 @@
 	justify-content: space-between;
 	align-items: center;
 	height: 50px;
-}
 
-.itemContainer::before {
-	content: '';
-	width: 0;
-	height: 1px;
-	background-color: #000000;
-	position: absolute;
-	top: 50%;
-	left: 0;
-	transition: width 0.2s ease-in-out;
-	pointer-events: none;
-}
-
-.itemContainer.completed {
-	opacity: 0.7;
 	&::before {
-		width: 100%;
+		content: '';
+		width: 0;
+		height: 1px;
+		background-color: #000000;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transition: width 0.2s ease-in-out;
+		pointer-events: none;
+	}
+
+	&.completed {
+		opacity: 0.7;
+		&::before {
+			width: 100%;
+		}
 	}
 }
-
 .title {
 	font-size: 20px;
 }
@@ -39,13 +38,11 @@
 	cursor: pointer;
 	margin-left: 10px;
 
-	img {
+	> img {
 		transition: scale 0.2s ease-in-out;
 	}
-}
 
-.button:hover {
-	img {
+	&:hover > img {
 		scale: 1.3;
 	}
 }

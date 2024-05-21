@@ -23,18 +23,18 @@
 	background: none;
 	border: none;
 	cursor: pointer;
-}
 
-.button:disabled {
-	opacity: 0.2;
-	cursor: default;
-}
+	&:disabled {
+		opacity: 0.2;
+		cursor: default;
+	}
 
-.icon {
-	rotate: 0;
-	transition: all 0.2s ease-in-out;
-}
+	> .icon {
+		rotate: 0;
+		transition: all 0.2s ease-in-out;
 
-.icon:hover {
-	rotate: 90deg;
+		&:hover {
+			rotate: 90deg;
+		}
+	}
 }

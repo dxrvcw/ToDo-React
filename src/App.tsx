@@ -1,4 +1,4 @@
-import styles from './App.module.css'
+import styles from './App.module.scss'
 import { TodoList } from './components/TodoList/TodoList'
 
 export default function App() {

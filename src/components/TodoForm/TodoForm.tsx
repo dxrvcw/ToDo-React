@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import AddIcon from '../../assets/add.svg'
 import { addTodo } from '../../store/todoSlice'
-import styles from './TodoForm.module.css'
+import styles from './TodoForm.module.scss'
 
 export function TodoForm(): JSX.Element {
 	const [title, setTitle] = useState('')

@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux'
 import ITodo from '../../interfaces/ITodo'
 import { TodoForm } from '../TodoForm/TodoForm'
 import { TodoItem } from '../TodoItem/TodoItem'
-import styles from './TodoList.module.css'
+import styles from './TodoList.module.scss'
 
 export function TodoList(): JSX.Element {
 	const todos = useSelector(
