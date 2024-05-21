@@ -1,25 +1,14 @@
+import { useDispatch } from 'react-redux'
 import CloseIcon from '../../assets/close.svg'
 import DeleteIcon from '../../assets/delete.svg'
 import DoneIcon from '../../assets/done.svg'
+import ITodo from '../../interfaces/ITodo'
+import { removeTodo, toggleTodo } from '../../store/todoSlice'
 import styles from './TodoItem.module.css'
 
-interface ITodoItemProps {
-	id: string
-	title: string
-	date: string
-	completed: boolean
-	toggleTodoItem: Function
-	deleteTodoItem: Function
-}
+export function TodoItem({ id, title, date, completed }: ITodo): JSX.Element {
+	const dispatch = useDispatch()
 
-export function TodoItem({
-	id,
-	title,
-	date,
-	completed,
-	toggleTodoItem,
-	deleteTodoItem,
-}: ITodoItemProps): JSX.Element {
 	return (
 		<div className={`${styles.itemContainer} ${completed && styles.completed}`}>
 			<div>
@@ -28,14 +17,14 @@ export function TodoItem({
 			</div>
 			<div>
 				<button
-					className={`${styles.button}`}
-					onClick={() => deleteTodoItem(id)}
+					className={styles.button}
+					onClick={() => dispatch(removeTodo({ id }))}
 				>
 					<img src={DeleteIcon} alt='' />
 				</button>
 				<button
-					className={`${styles.button}`}
-					onClick={() => toggleTodoItem(id)}
+					className={styles.button}
+					onClick={() => dispatch(toggleTodo({ id }))}
 				>
 					<img src={completed ? CloseIcon : DoneIcon} alt='' />
 				</button>

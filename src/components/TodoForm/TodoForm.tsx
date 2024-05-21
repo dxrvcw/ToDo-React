@@ -1,18 +1,18 @@
 import { useState } from 'react'
+import { useDispatch } from 'react-redux'
 import AddIcon from '../../assets/add.svg'
+import { addTodo } from '../../store/todoSlice'
 import styles from './TodoForm.module.css'
 
-interface TodoFormProps {
-	addTodo: Function
-}
-
-export function TodoForm({ addTodo }: TodoFormProps): JSX.Element {
+export function TodoForm(): JSX.Element {
 	const [title, setTitle] = useState('')
 	const [date, setDate] = useState('')
 
+	const dispatch = useDispatch()
+
 	function handleSubmit(): void {
 		if (!title || !date) return
-		addTodo(title, date)
+		dispatch(addTodo({ title, date }))
 		setDate('')
 		setTitle('')
 	}
